@@ -1,0 +1,205 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  /* Background gradient */
+  --Soft-violet: hsl(273, 75%, 66%);
+  --Soft-blue: hsl(240, 73%, 65%);
+  /* Text */
+  --Very-dark-desaturated-blue: hsl(238, 29%, 16%);
+  --Soft-red: hsl(14, 88%, 65%);
+  --Very-dark-grayish-blue: hsl(237, 12%, 33%);
+  --Dark-grayish-blue: hsl(240, 6%, 50%);
+
+  /* Dividers */
+  --Light-grayish-blue: hsl(240, 5%, 91%);
+}
+
+main {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(
+    0deg,
+    var(--Soft-blue) 0%,
+    var(--Soft-violet) 100%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Kumbh Sans", sans-serif;
+}
+.container {
+  position: relative;
+}
+
+.container_card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 921px;
+  min-height: 510px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  flex: 1;
+  padding-block: 5rem;
+  padding-right: 2rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.faq {
+  flex: 1;
+  height: 100%;
+}
+
+.faq > H3 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.faq_detaills {
+  margin-top: 2rem;
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+details {
+  border-bottom: 1px solid var(--Light-grayish-blue);
+  padding-bottom: 0.75rem;
+  user-select: none;
+  transition: all 0.3s;
+}
+
+details summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--Dark-grayish-blue);
+  list-style: none;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+details summary:hover {
+  color: var(--Very-dark-desaturated-blue);
+}
+
+details > summary::marker, /* Latest Chrome, Edge, Firefox */ 
+details > summary::-webkit-details-marker /* Safari */ {
+  display: none;
+}
+
+details[open] summary {
+  color: var(--Very-dark-desaturated-blue);
+}
+
+details[open] summary img {
+  transform: rotate(-180deg);
+}
+
+img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  transition: all 0.3s;
+}
+details p {
+  font-weight: 400;
+  margin-top: 1rem;
+  line-height: 16px;
+  color: var(--Dark-grayish-blue);
+}
+
+.image {
+  overflow: hidden;
+  flex: 1;
+}
+
+.woman {
+  display: block;
+  transform: translateX(-50px);
+}
+.woman_mobile {
+  display: none;
+}
+
+.pattern {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 99;
+  transform: translate(-530px, -58%);
+}
+
+.box {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(-75px, -25%);
+  z-index: 9999;
+}
+
+@media screen and (max-width: 912px) {
+  .container {
+    display: grid;
+    place-items: center;
+    width: 100%;
+  }
+
+  .container_card {
+    width: 90%;
+    min-height: auto;
+    margin-inline: 1rem;
+    flex-direction: column;
+    padding-inline: 0;
+    padding-block: 0;
+    padding-bottom: 3rem;
+    overflow: visible;
+  }
+
+  .woman_mobile {
+    display: block;
+    width: 355px;
+    position: absolute;
+    max-width: unset;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -170px);
+  }
+  .faq {
+    padding-inline: 22px;
+    width: 100%;
+    margin-top: 134px;
+  }
+  .faq > H3 {
+    text-align: center;
+  }
+
+  details p {
+    padding-right: 1rem;
+  }
+
+  .box,
+  .pattern,
+  .woman {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 512px) {
+  details summary {
+    font-size: 12px;
+  }
+
+  details p {
+    padding: 0;
+  }
+}
