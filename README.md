@@ -30,8 +30,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [GIT](https://github.com/Sittisukintaruk/Frontend-Mentor---FAQ-accordion-card-solution)
+- Live Site URL: [Live](https://dainty-profiterole-62e128.netlify.app/)
 
 ## My process
 
